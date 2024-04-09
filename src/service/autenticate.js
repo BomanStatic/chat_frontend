@@ -19,8 +19,8 @@ async function authenticate(credentials) {
     }
 }
 
-// function register(data){
-//     const resp = sendData()
-// }
+async function register(data) {
+    const resp = await sendData("http://localhost:3000/auth/signup", data);
+}
 
-export { authenticate };
+export { authenticate, register };
